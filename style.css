@@ -1,1 +1,37 @@
+/* STEP #1: Define the animation sequence*/
 
+@keyframes colorchange{
+    from{background-color: powderblue;}
+    to{background-color: palevioletred;}
+}
+@keyframes colorchangesmooth{
+    0%{background-color: powderblue;}
+    50%{background-color: palevioletred;}
+    100%{background-color: powderblue;}
+
+}
+/*STEP #2: Configure the animation on an element*/
+
+#animated-box{
+    width: 200px;
+    height: 200px;
+    border: 2px solid plum;
+    animation-name: colorchangesmooth;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+/*Use TRANFORMS in an animation*/
+
+@keyframes spin{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+
+#animated-emoji{
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    font-size: 40px;
+    animation-timing-function: linear;
+}
